@@ -29,13 +29,21 @@ function readData() {
 
 function writeData(data) {
   // writeFileSync to save file  - Synchronous
-  // wrhiteFile to save file - Asynchronous
+  // writeFile to save file - Asynchronous
+  const output = JSON.stringify(data);
+  // create a new game save, change string to variable.
+  fs.writeFile("new_game_save.json", output, e => {
+    // turn this into try catch for error handling
+    if (e) throw e;
+  });
 }
 
 // test function
 function test() {
   let anobj = readData();
-  // console.log(anobj);
+  console.log("file read", anobj);
+  writeData(anobj);
+  console.log("written.");
 }
 
 test();
