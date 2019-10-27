@@ -38,12 +38,7 @@ function writeData(data) {
   });
 }
 
-// test function
-function test() {
-  let anobj = readData();
-  console.log("file read", anobj);
-  writeData(anobj);
-  console.log("written.");
-}
-
-test();
+module.exports = {
+  writeData,
+  readData
+};
