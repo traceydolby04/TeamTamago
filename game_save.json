@@ -1,6 +1,1 @@
-{
-  "name": "Tomagotchi",
-  "age": 2,
-  "behavior": "normal",
-  "hunger": "full"
-}
+{"name":"Babytchi","birth":1572233068429,"health":100,"hunger":4,"discipline":0,"weight":5,"happy":4}
