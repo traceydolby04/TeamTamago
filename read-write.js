@@ -27,12 +27,12 @@ function readData() {
   }
 }
 
-function writeData(data) {
+function writeData(data, fileName) {
   // writeFileSync to save file  - Synchronous
   // writeFile to save file - Asynchronous
   const output = JSON.stringify(data);
   // create a new game save, change string to variable.
-  fs.writeFile("game_save.json", output, e => {
+  fs.writeFile(fileName, output, e => {
     // turn this into try catch for error handling
     if (e) throw e;
   });

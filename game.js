@@ -26,3 +26,8 @@ class Egg {
 module.exports = {
   Egg
 };
+
+let test = new Egg("Eggbert");
+console.log(test);
+test.birth = 1;
+console.log(test);
