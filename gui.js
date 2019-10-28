@@ -32,6 +32,9 @@ const rl = readline.createInterface({
   output: process.stdout,
   prompt: eggPrompt // prompt needs to be a string as per documentation
 });
+
+// NOTE: we can have user input via keypress instead of typing by using.
+
 // let i = 0;
 // while (i < 100000) {
 //   rl.setPrompt(i);
@@ -60,6 +63,6 @@ rl.on("line", line => {
 function buildString(egg) {
   // hunger, discipline, happy
   //    Happy: [3], Hunger: [4], Discipline: [5]
-  const meters = `Happy: ${egg.happy}, Hunger: ${egg.hunger}, Discipline:${egg.discipline}\n>`;
+  const meters = `Happy: ${egg.happy}, Hunger: ${egg.hunger}, Discipline:${egg.discipline}\n`;
   return meters;
 }
